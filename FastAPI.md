@@ -1,4 +1,6 @@
-<span id="20241208211435-86jj2g0" style="display: none;"></span>FastAPI 是一个用于构建 API 的现代、快速（高性能）的 web 框架，使用 Python 并基于标准的 Python 类型提示。
+<span id="20241208211435-86jj2g0" style="display: none;"></span>---
+
+FastAPI 是一个用于构建 API 的现代、快速（高性能）的 web 框架，使用 Python 并基于标准的 Python 类型提示。
 
 目前支持的 Python 版本：**3.8 - 3.12**
 
