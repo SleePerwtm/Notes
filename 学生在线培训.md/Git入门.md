@@ -18,15 +18,15 @@ Git是一个版本控制软件，主要用于解决在多人合作开发过程�
 
 首先，我们需要创建一个远程仓库，也就是你项目的云端存储库，一般使用GitHub/Gitee平台。下面都以GitHub为例。
 
-![image](assets/image-20250117202923-vkag2xm.png)​
+![image](assets/image-20250117202923-vkag2xm.png)
 
 登录GitHub后，左边的仓库预览和右上方头像边上的加号图标，都可以创建新仓库。
 
-​![image](assets/image-20250117202932-ia0ywzv.png)​
+![image](assets/image-20250117202932-ia0ywzv.png)
 
 输入仓库名称（只能用英文），描述（可选），选择公开或私有，然后点击“Create repository”按钮。
 
-​![image](assets/image-20250117202936-6782dbv.png)​
+![image](assets/image-20250117202936-6782dbv.png)
 
 然后会进入上面的界面。这里GitHub已经给出了相关的命令行指令。
 
@@ -236,7 +236,7 @@ git reset --soft commit_id
 
 使用 `soft`​ 选项只会移动HEAD指针，暂存区和工作目录中的更改都会保留在工作目录中，以便再次提交。用于想要保留更改并重新组织提交的情况，或者在分支切换时保持工作目录整洁。
 
-​![image](assets/image-20250117202947-t5pv82z.png)​
+![image](assets/image-20250117202947-t5pv82z.png)
 
 对于回退版本，还有一个命令
 
@@ -246,7 +246,7 @@ git revert commit_id
 
 可以创建一个新的提交，用来撤销指定提交所做的更改。
 
-​![image](assets/image-20250117202951-y4xkt63.png)​
+![image](assets/image-20250117202951-y4xkt63.png)
 
 那如果我们回退到了老版本以后又反悔了，想要再次前进到新版本，却不知道新版本的ID号，该怎么办呢？事实上，Git提供了一个 `git reflog`​ 命令，可以查看所有的版本更迭记录，包括已经被删除的提交记录。只需要
 
