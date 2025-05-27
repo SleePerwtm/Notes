@@ -2,6 +2,10 @@
 
 ---
 
+资料引自 CSDN 上的[文章](https://blog.csdn.net/weixin_55881133/article/details/142289410?fromshare=blogdetail&amp;sharetype=blogdetail&amp;sharerId=142289410&amp;sharerefer=PC&amp;sharesource=T_DOGE&amp;sharefrom=from_link)
+
+---
+
 # 1 C/C++
 
 ## 1.1 C/C++ Extension Pack 插件自定义格式化设置
@@ -85,9 +89,3 @@ BinPackParameters: true  # 启用参数打包，减少换行次数
 还有很多需要注意的编写规范，一篇文章肯定是连皮毛都讲不完的。
 
 推荐阅读《c语言规范》、《华为c编程规范》和《c专家编程》
-
----
-
-资料引自 CSDN 上的[文章](https://blog.csdn.net/weixin_55881133/article/details/142289410?fromshare=blogdetail&amp;sharetype=blogdetail&amp;sharerId=142289410&amp;sharerefer=PC&amp;sharesource=T_DOGE&amp;sharefrom=from_link)
-
-‍
