@@ -1,8 +1,7 @@
-site_name: SleePerwtm's Notes
+site_name: Notes
 theme:
   name: material
-  features:
-    - navigation.tabs
+  language: zh
 
 # 公式渲染支持，来自 Material for MkDocs 文档
 markdown_extensions:
