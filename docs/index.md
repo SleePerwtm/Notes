@@ -1,17 +1,7 @@
-# Welcome to MkDocs
+# SleePerwtm's Notes
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+这里是 SleePerwtm 的个人笔记库，记录自己大学期间学习到的知识等。
 
-## Commands
+我是一个 24 级的工程软件专业的小登，目前还在学习中，喜欢音乐。
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
-
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+我的个人主页：[https://github.com/SleePerwtm](https://github.com/SleePerwtm)
