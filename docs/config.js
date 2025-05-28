@@ -11,3 +11,6 @@ window.MathJax = {
         processHtmlClass: "arithmatex"
     }
 };
+
+/* 代码高亮配置，来自 Material for MkDocs 文档 */
+hljs.initHighlighting();

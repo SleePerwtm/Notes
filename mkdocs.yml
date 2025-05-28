@@ -7,16 +7,21 @@ theme:
     primary: blue # 设置主色调，来自 Material for MkDocs 文档
     accent: cyan # 设置强调色，来自 Material for MkDocs 文档
 
-# 公式渲染支持，来自 Material for MkDocs 文档
 markdown_extensions:
-  - pymdownx.arithmatex:
+  - pymdownx.arithmatex: # 公式渲染支持，来自 Material for MkDocs 文档
       generic: true
   - toc: # 目录支持，来自 Material for MkDocs 文档
       permalink: true
 extra_javascript:
   - config.js
-  - https://polyfill.io/v3/polyfill.min.js?features=es6
+
+  - https://polyfill.io/v3/polyfill.min.js?features=es6 # 公式渲染支持，来自 Material for MkDocs 文档
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+  - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js # 代码高亮支持，来自 Material for MkDocs 文档
+
+extra_css:
+  - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/default.min.css # 代码高亮支持，来自 Material for MkDocs 文档
 
 # 代码块高亮支持，来自 Material for MkDocs 文档
 markdown_extensions:
