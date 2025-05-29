@@ -12,22 +12,25 @@ markdown_extensions:
       generic: true
   - toc: # 目录支持，来自 Material for MkDocs 文档
       permalink: true
-extra_javascript:
-  - config.js
+      baselevel: 2  # 将标题层级整体偏移1级
 
-  - https://polyfill.io/v3/polyfill.min.js?features=es6 # 公式渲染支持，来自 Material for MkDocs 文档
-  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
-
-  - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js # 代码高亮支持，来自 Material for MkDocs 文档
-
-extra_css:
-  - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/default.min.css # 代码高亮支持，来自 Material for MkDocs 文档
-
-# 代码块高亮支持，来自 Material for MkDocs 文档
-markdown_extensions:
+  # 代码块高亮支持，来自 Material for MkDocs 文档
   - pymdownx.highlight:
       linenums: true
   - pymdownx.superfences
   - pymdownx.inlinehilite
   - pymdownx.keys
   - pymdownx.snippets
+
+extra_javascript:
+  - config.js
+
+  # MathJax 支持，来自 Material for MkDocs 文档
+  - https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-chtml.js
+
+  # 代码高亮支持，来自 Material for MkDocs 文档
+  - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js
+
+extra_css:
+  # 代码高亮支持，来自 Material for MkDocs 文档
+  - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/default.min.css
