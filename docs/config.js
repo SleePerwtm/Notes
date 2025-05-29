@@ -8,6 +8,9 @@ window.MathJax = {
     },
     options: {
         ignoreHtmlClass: ".*|",
-        processHtmlClass: "arithmatex"
+        processHtmlClass: "arithmatex",
+        renderActions: {
+            addMenu: [0, '', '']  // 禁用右键菜单提升性能
+        }
     }
 };
