@@ -23,7 +23,7 @@ markdown_extensions:
   - pymdownx.snippets
 
 extra_javascript:
-  - config.js
+  - /js/config.js
 
   # MathJax 支持，来自 Material for MkDocs 文档
   - https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-chtml.js
