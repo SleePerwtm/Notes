@@ -3,7 +3,7 @@ theme:
   name: material
   language: zh
   palette:
-    scheme: slate # 设置深色模式，来自 Material for MkDocs 文档
+    scheme: default # 设置浅色模式，来自 Material for MkDocs 文档
     primary: blue # 设置主色调，来自 Material for MkDocs 文档
     accent: cyan # 设置强调色，来自 Material for MkDocs 文档
 
