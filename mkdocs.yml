@@ -34,3 +34,13 @@ extra_javascript:
 extra_css:
   # 代码高亮支持，来自 Material for MkDocs 文档
   - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/default.min.css
+
+plugins:
+  - git-revision-date-localized:
+      enable_creation_date: true
+      type: iso_datetime #时间类型
+      timezone: Asia/Shanghai #时区
+      locale: zh #首选语言
+      fallback_to_build_date: false #许回退到git 不可用时mkdocs build执行的时间
+  - git-committers:
+      enabled: !ENV [CI, false]
