@@ -42,5 +42,3 @@ plugins:
       timezone: Asia/Shanghai #时区
       locale: zh #首选语言
       fallback_to_build_date: false #许回退到git 不可用时mkdocs build执行的时间
-  - git-committers:
-      enabled: !ENV [CI, false]
