@@ -3127,12 +3127,16 @@
 \end{array}
 \right.
 \]</div>
-<p>其中：
-- <span class="arithmatex">\(\boldsymbol{f},\boldsymbol{x},\boldsymbol{b},\text{beq},\text{lb},\text{ub}\)</span> 为<em>列向量</em>
-    - <span class="arithmatex">\(\boldsymbol{f}\)</span> 称为<strong>价值向量</strong>
-    - <span class="arithmatex">\(\boldsymbol{x}\)</span> 称为<strong>决策向量</strong>
-    - <span class="arithmatex">\(\boldsymbol{b}\)</span> 称为<strong>资源向量</strong>
-- <span class="arithmatex">\(\boldsymbol{A},\text{Aeq}\)</span> 为矩阵</p>
+<p>其中：</p>
+<ul>
+<li><span class="arithmatex">\(\boldsymbol{f},\boldsymbol{x},\boldsymbol{b},\text{beq},\text{lb},\text{ub}\)</span> 为<em>列向量</em><ul>
+<li><span class="arithmatex">\(\boldsymbol{f}\)</span> 称为<strong>价值向量</strong></li>
+<li><span class="arithmatex">\(\boldsymbol{x}\)</span> 称为<strong>决策向量</strong></li>
+<li><span class="arithmatex">\(\boldsymbol{b}\)</span> 称为<strong>资源向量</strong></li>
+</ul>
+</li>
+<li><span class="arithmatex">\(\boldsymbol{A},\text{Aeq}\)</span> 为矩阵</li>
+</ul>
 <h4 id="132">1.3.2. 软件求解<a class="headerlink" href="#132" title="Permanent link">&para;</a></h4>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
@@ -3140,24 +3144,26 @@
 <span class="p">[</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">fval</span><span class="p">]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">linprog</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="w"> </span><span class="n">A</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="n">Aeq</span><span class="p">,</span><span class="w"> </span><span class="n">beq</span><span class="p">)</span>
 <span class="p">[</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">fval</span><span class="p">]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">linprog</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="w"> </span><span class="n">A</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="n">Aeq</span><span class="p">,</span><span class="w"> </span><span class="n">beq</span><span class="p">,</span><span class="w"> </span><span class="n">lb</span><span class="p">,</span><span class="w"> </span><span class="n">ub</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-<p>其中：
-- <code>x</code> 返回<strong>决策向量</strong>的取值
-- <code>fval</code> 返回<strong>目标函数的最优值</strong>
-- <code>A</code> 和 <code>b</code> 对应<strong>线性不等式约束</strong>
-- <code>Aeq</code> 和 <code>beq</code> 对应<strong>线性等式约束</strong>
-- <code>lb</code> 和 <code>ub</code> 对应<strong>决策向量</strong>的<strong>下界向量</strong>和<strong>上界向量</strong></p>
+<p>其中：</p>
+<ul>
+<li><code>x</code> 返回<strong>决策向量</strong>的取值</li>
+<li><code>fval</code> 返回<strong>目标函数的最优值</strong></li>
+<li><code>A</code> 和 <code>b</code> 对应<strong>线性不等式约束</strong></li>
+<li><code>Aeq</code> 和 <code>beq</code> 对应<strong>线性等式约束</strong></li>
+<li><code>lb</code> 和 <code>ub</code> 对应<strong>决策向量</strong>的<strong>下界向量</strong>和<strong>上界向量</strong></li>
+</ul>
 <p>当线性规划不是 Matlab 标准形式时，需要<strong><em>将其转换为 Matlab 标准形式</em></strong>再进行求解。</p>
 <p>例如：</p>
 <div class="arithmatex">\[
-\begin{array}{c}
-    \max _x \quad \boldsymbol{c}^\mathrm{T}\boldsymbol{x} \,, \\
+\begin{array}{l}
+    \displaystyle \max _x \quad \boldsymbol{c}^\mathrm{T}\boldsymbol{x} \,, \\
     \text{s.t.} \quad \boldsymbol{A}\boldsymbol{x} \geqslant \boldsymbol{b} \,.
 \end{array}
 \]</div>
 <p>需要转化为</p>
 <div class="arithmatex">\[
-\begin{array}{c}
-    \min _x \quad -\boldsymbol{c}^\mathrm{T}\boldsymbol{x} \,, \\
+\begin{array}{l}
+    \displaystyle \min _x \quad -\boldsymbol{c}^\mathrm{T}\boldsymbol{x} \,, \\
     \text{s.t.} \quad -\boldsymbol{A}\boldsymbol{x} \leqslant -\boldsymbol{b} \,.
 \end{array}
 \]</div>
@@ -3165,9 +3171,8 @@
 <h5 id="1331">1.3.3.1. 例<a class="headerlink" href="#1331" title="Permanent link">&para;</a></h5>
 <p>求解下列线性规划问题：</p>
 <div class="arithmatex">\[
-\max \quad z = 2x_1 + 3x_2 - 5x_3 \,,
-\]</div>
-<div class="arithmatex">\[
+\begin{array}{l}
+\max \quad z = 2x_1 + 3x_2 - 5x_3 \,, \\
 \text{s.t.} \left\{
 \begin{array}{l}
     x_1 + x_2 + x_3 = 7 \,, \\
@@ -3176,15 +3181,15 @@
     x_1, x_2, x_3 \geqslant 0 \,.
 \end{array}
 \right.
+\end{array}
 \]</div>
 <p><strong>解</strong>：</p>
 <ol>
 <li>
 <p>转换为 Matlab 标准形式：</p>
 <div class="arithmatex">\[
-\min _x \quad w = -2x_1 - 3x_2 + 5x_3 \,, 
-\]</div>
-<div class="arithmatex">\[
+\begin{array}{l}
+\displaystyle \min _x \quad w = -2x_1 - 3x_2 + 5x_3 \,, \\
 \text{s.t.} \left\{
 \begin{array}{l}
     \begin{bmatrix}
@@ -3203,6 +3208,7 @@
     \left[x_1, x_2, x_3\right]^\mathrm{T} \geqslant \left[0, 0, 0\right]^\mathrm{T} \,.
 \end{array}
 \right.
+\end{array}
 \]</div>
 </li>
 <li>
@@ -3247,7 +3253,7 @@
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime" title="2025年7月14日 15:33:27 CST">2025-07-14 15:33:27</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime" title="2025年7月14日 22:38:51 CST">2025-07-14 22:38:51</span>
   </span>
 
     
