@@ -3,9 +3,19 @@ theme:
   name: material
   language: zh
   palette:
-    scheme: default # 设置浅色模式，来自 Material for MkDocs 文档
-    primary: blue # 设置主色调，来自 Material for MkDocs 文档
-    accent: cyan # 设置强调色，来自 Material for MkDocs 文档
+    - scheme: default # 设置浅色模式，来自 Material for MkDocs 文档
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+      primary: blue # 设置主色调，来自 Material for MkDocs 文档
+      accent: cyan # 设置强调色，来自 Material for MkDocs 文档
+
+    - scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+      primary: cyan # 设置主色调，来自 Material for MkDocs 文档
+      accent: blue # 设置强调色，来自 Material for MkDocs 文档
 
 markdown_extensions:
   - pymdownx.arithmatex: # 公式渲染支持，来自 Material for MkDocs 文档
