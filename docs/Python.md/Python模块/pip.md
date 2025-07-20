@@ -1,7 +1,21 @@
-# 换源下载
+# 换源
+
+## 临时换源
 
 ```bash
 pip install <package_name> -i https://pypi.tuna.tsinghua.edu.cn/simple
+```
+
+## 永久换源
+
+```bash
+pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple/
+```
+
+## 恢复默认源
+
+```bash
+pip config unset global.index-url
 ```
 
 # 常用命令
