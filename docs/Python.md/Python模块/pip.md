@@ -18,6 +18,13 @@ pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple/
 pip config unset global.index-url
 ```
 
+## 常用镜像源
+
+- 清华源：https://pypi.tuna.tsinghua.edu.cn/simple/
+- 阿里源：https://mirrors.aliyun.com/pypi/simple/
+- 腾讯源：https://mirrors.cloud.tencent.com/pypi/simple/
+- 豆瓣源：https://pypi.doubanio.com/simple/
+
 # 常用命令
 
 ## 查看已安装的包
