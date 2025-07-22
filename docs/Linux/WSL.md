@@ -4,7 +4,7 @@ WSL 全称为 Windows Subsystem for Linux，是一个适用于 Windows 的 Linux
 
 ## 启用 Windows 功能
 
-首先，需要开启适用于 Linux 的 Windows 子系统、Virutal Machine Platform 功能。
+首先，需要开启适用于 Linux 的 Windows 子系统、Virtual Machine Platform 功能。
 
 方法是打开 Windows 控制面板，点击“程序”，然后点击“启用或关闭 Windows 功能”，勾选“适用于 Linux 的 Windows 子系统”复选框以及“Virtual Machine Platform”复选框。
 
