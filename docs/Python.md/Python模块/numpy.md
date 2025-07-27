@@ -1,10 +1,16 @@
-‍
+# 与 Matlab 功能相似的函数对应
 
----
+[matlab中一些函数在numpy中的对应](https://blog.csdn.net/Taylent/article/details/101671713)
 
-# 1 numpy.random
+[MATLAB与Numpy函数对照表](https://blog.csdn.net/a8039974/article/details/84646219)
 
-## 1.1 numpy.random.uniform
+[numpy与matlab的数据交换](https://www.zhihu.com/column/p/31763749)
+
+# 库包含的内容
+
+## 1 numpy.random
+
+### 1.1 numpy.random.uniform
 
 ```python
 np.random.uniform(-1, 1, size=(100, 2))
