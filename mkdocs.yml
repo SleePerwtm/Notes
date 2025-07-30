@@ -2,6 +2,9 @@ site_name: Notes
 theme:
   name: material
   language: zh
+  features:
+    - content.code.copy
+    - content.code.annotate
   palette:
     - scheme: default # 设置浅色模式，来自 Material for MkDocs 文档
       toggle:
@@ -16,6 +19,9 @@ theme:
         name: Switch to light mode
       primary: cyan # 设置主色调，来自 Material for MkDocs 文档
       accent: blue # 设置强调色，来自 Material for MkDocs 文档
+  font:
+    text: Roboto Slab
+    code: Roboto Mono
 
 markdown_extensions:
   - pymdownx.arithmatex: # 公式渲染支持，来自 Material for MkDocs 文档
