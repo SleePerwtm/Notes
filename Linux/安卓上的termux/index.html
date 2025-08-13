@@ -860,6 +860,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#powerlevel10k" class="md-nav__link">
+    <span class="md-ellipsis">
+      切换主题为 powerlevel10k
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -3877,6 +3886,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#powerlevel10k" class="md-nav__link">
+    <span class="md-ellipsis">
+      切换主题为 powerlevel10k
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -4013,19 +4031,25 @@ sh<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;</spa
 <h3 id="_3">安装自动补全和语法高亮插件<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <p>安装命令：</p>
 <ul>
-<li>
-<p>自动补全
-    <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/zsh-users/zsh-completions<span class="w"> </span><span class="si">${</span><span class="nv">ZSH_CUSTOM</span><span class="p">:=~/.oh-my-zsh/custom</span><span class="si">}</span>/plugins/zsh-completions
-</code></pre></div></td></tr></table></div></p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/zsh-users/zsh-autosuggestions<span class="w"> </span><span class="si">${</span><span class="nv">ZSH_CUSTOM</span><span class="p">:=~/.oh-my-zsh/custom</span><span class="si">}</span>/plugins/zsh-autosuggestions
-</code></pre></div></td></tr></table></div>
-</li>
-<li>
-<p>语法高亮
+<li>自动补全
+    <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/zsh-users/zsh-autosuggestions<span class="w"> </span><span class="si">${</span><span class="nv">ZSH_CUSTOM</span><span class="p">:=~/.oh-my-zsh/custom</span><span class="si">}</span>/plugins/zsh-autosuggestions
+</code></pre></div></td></tr></table></div></li>
+<li>语法高亮
     <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/zsh-users/zsh-syntax-highlighting.git<span class="w"> </span><span class="si">${</span><span class="nv">ZSH_CUSTOM</span><span class="k">:-</span><span class="p">~/.oh-my-zsh/custom</span><span class="si">}</span>/plugins/zsh-syntax-highlighting
-</code></pre></div></td></tr></table></div></p>
-</li>
+</code></pre></div></td></tr></table></div></li>
 </ul>
+<h3 id="powerlevel10k">切换主题为 powerlevel10k<a class="headerlink" href="#powerlevel10k" title="Permanent link">&para;</a></h3>
+<p>编辑 <code>~/.zshrc</code> 中的 <code>ZSH_THEME</code> 项为 <code>powerlevel10k/powerlevel10k</code></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nv">ZSH_THEME</span><span class="o">=</span><span class="s2">&quot;powerlevel10k/powerlevel10k&quot;</span>
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>powerlevel10k/powerlevel10k
+</code></pre></div></td></tr></table></div>
+<p>克隆主题仓库并运行配置文件</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>--depth<span class="o">=</span><span class="m">1</span><span class="w"> </span>https://github.com/romkatv/powerlevel10k.git<span class="w"> </span><span class="si">${</span><span class="nv">ZSH_CUSTOM</span><span class="k">:-</span><span class="nv">$HOME</span><span class="p">/.oh-my-zsh/custom</span><span class="si">}</span>/themes/powerlevel10k
+<span class="nb">source</span><span class="w"> </span>~/.zshrc
+</code></pre></div></td></tr></table></div>
+<p>接下来根据引导进行安装配置即可。</p>
 
 
 
