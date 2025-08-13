@@ -165,6 +165,10 @@ termux 中也可选择 oh-my-termux
 bash -c "$(curl -fsSL https://git.io/oh-my-termux)"
 ```
 
+安装成功后如图
+
+![oh-my-zsh 安装成功](<assets/安卓上的termux-oh-my-zsh 安装成功.jpg>)
+
 ## 设置 zsh 为默认终端
 
 ```bash
@@ -182,3 +186,20 @@ echo $SHELL
 ```bash
 /data/data/com.termux/files/usr/bin/zsh
 ```
+
+## 安装自动补全和语法高亮插件
+
+安装命令：
+
+- 自动补全
+    ```bash
+    git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-completions
+    ```
+
+    ```bash
+    git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+    ```
+- 语法高亮
+    ```bash
+    git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+    ```
