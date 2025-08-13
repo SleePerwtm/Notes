@@ -130,3 +130,55 @@ code-server
 ```bash
 apt install gcc g++ gdb
 ```
+
+# 使用 zsh 代替 bash
+
+## 安装 zsh
+
+```bash
+apt install zsh
+```
+
+## 自动化配置工具 oh-my-zsh
+
+安装 oh-my-zsh 的前置需要安装 git
+
+```bash
+apt install git
+```
+
+安装 oh-my-zsh
+
+```bash
+# 通过curl下载
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+```
+
+```bash
+# 通过weget下载
+sh -c "$(wget -O- https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+```
+
+termux 中也可选择 oh-my-termux
+
+```bash
+bash -c "$(curl -fsSL https://git.io/oh-my-termux)"
+```
+
+## 设置 zsh 为默认终端
+
+```bash
+chsh -s zsh
+```
+
+重启终端后检查是否为 zsh
+
+```bash
+echo $SHELL
+```
+
+输出应为
+
+```bash
+/data/data/com.termux/files/usr/bin/zsh
+```
