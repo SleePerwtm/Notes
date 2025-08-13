@@ -183,18 +183,42 @@ echo $SHELL
 
 ## 安装自动补全和语法高亮插件
 
-安装命令：
+自动补全插件
 
-- 自动补全
-    ```bash
-    git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-completions
-    ```
+```text
+zsh-autosuggestions
+```
 
-    ```bash
-    git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-    ```
+```bash
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+```
+语法高亮插件
 
-- 语法高亮
-    ```bash
-    git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-    ```
+```text
+zsh-syntax-highlighting
+```
+
+```bash
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+```
+
+## 切换主题为 powerlevel10k
+
+编辑 `~/.zshrc` 中的 `ZSH_THEME` 项为 `powerlevel10k/powerlevel10k`
+
+```bash
+ZSH_THEME="powerlevel10k/powerlevel10k"
+```
+
+```text
+powerlevel10k/powerlevel10k
+```
+
+克隆主题仓库并运行配置文件
+
+```bash
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+source ~/.zshrc
+```
+
+接下来根据引导进行安装配置即可。
