@@ -61,16 +61,10 @@ proot-distro login ubuntu
 
 ## 安装 code-server
 
-下载 wget 工具
-
-```bash
-apt install wget
-```
-
 下载 code-server 安装程序
 
 ```bash
-wget https://code-server.dev/install.sh | sh
+curl -fsSL https://code-server.dev/install.sh | sh
 ```
 
 安装完成后运行安装程序
