@@ -6,6 +6,54 @@
 
 浏览器搜索 termux，在 github 页面的 releases 处下载安装包。
 
+# 使用 ssh 远程连接
+
+## 安装 openssh
+
+```bash
+apt install openssh
+```
+
+## 设置密码
+
+```bash
+passwd
+```
+
+## 查询用户名以及 ip 地址
+
+用户名：
+
+```bash
+whoami
+```
+
+ip 地址：
+
+需要下载 `net-tools`：
+
+```bash
+apt install net-tools
+```
+
+输入 `ifconfig` 查看 ip 地址
+
+```bash
+ifconfig
+```
+
+## 启动 ssh 服务器
+
+```bash
+sshd
+```
+
+## 连接 ssh 服务器
+
+```bash
+ssh -p 8022 user@ip
+```
+
 # 部署 code-server
 
 ## 为 termux 申请手机系统权限
