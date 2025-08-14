@@ -75,6 +75,27 @@ sshd
 ssh -p 8022 user@ip
 ```
 
+## 远程主机公钥发生变化
+
+远程主机发生变化时本地可能会报错：
+
+```bash
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@    WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!     @
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+IT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!
+Someone could be eavesdropping on you right now (man-in-the-middle attack)!
+It is also possible that a host key has just been changed.
+```
+
+ssh服务是通过公钥和私钥来进行连接的，它会把每个曾经访问过计算机或服务器的公钥（public key），记录在~/.ssh/known_hosts 中，当下次访问曾经访问过的计算机或服务器时，ssh就会核对公钥，如果和上次记录的不同，OpenSSH会发出警告。
+
+解决方法是清除该 ip 地址的记录，然后重新连接。
+
+```bash
+ssh-keygen -R [ip]:port
+```
+
 # 使用 `proot-distro` 部署 Linux 环境
 
 建议使用 Debian 而不是 Ubuntu，因为 Ubuntu 的 `snap` 商店在 `proot` 中无法使用，而一些应用会强制要求使用 `snap` 商店，导致无法安装。因此不如直接使用 Debian。
