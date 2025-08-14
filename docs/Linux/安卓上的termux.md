@@ -282,6 +282,8 @@ echo $SHELL
 
 ## 安装自动补全和语法高亮插件
 
+### 从 github 克隆插件仓库
+
 自动补全插件
 
 ```text
@@ -299,6 +301,24 @@ zsh-syntax-highlighting
 
 ```bash
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+```
+
+### 启用插件
+
+使用 nano 打开 `~/.zshrc` 文件
+
+```bash
+nano ~/.zshrc
+```
+
+编辑 `~/.zshrc` 文件，找到 `plugins` 项，添加 `zsh-autosuggestions` 和 `zsh-syntax-highlighting` 两个插件。最好换行并在前面加 Tab 键。
+
+```bash
+plugins=(
+    git
+    zsh-autosuggestions
+    zsh-syntax-highlighting
+)
 ```
 
 ## 切换主题为 powerlevel10k
