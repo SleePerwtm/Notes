@@ -362,3 +362,9 @@ source ~/.zshrc
 ```
 
 接下来根据引导进行安装配置即可。
+
+## 重新配置 powerlevel10k 主题
+
+```bash
+p10k configure
+```
