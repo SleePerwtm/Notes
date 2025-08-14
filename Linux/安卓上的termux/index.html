@@ -824,6 +824,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      远程主机公钥发生变化
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -858,7 +867,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       换源
     </span>
@@ -891,7 +900,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
       修改配置文件
     </span>
@@ -951,7 +960,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#_6" class="md-nav__link">
     <span class="md-ellipsis">
       安装自动补全和语法高亮插件
     </span>
@@ -970,7 +979,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#_7" class="md-nav__link">
     <span class="md-ellipsis">
       启用插件
     </span>
@@ -3973,6 +3982,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      远程主机公钥发生变化
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -4007,7 +4025,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       换源
     </span>
@@ -4040,7 +4058,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
       修改配置文件
     </span>
@@ -4100,7 +4118,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#_6" class="md-nav__link">
     <span class="md-ellipsis">
       安装自动补全和语法高亮插件
     </span>
@@ -4119,7 +4137,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#_7" class="md-nav__link">
     <span class="md-ellipsis">
       启用插件
     </span>
@@ -4204,6 +4222,24 @@ apt<span class="w"> </span>update
 <h3 id="ssh_2">连接 ssh 服务器<a class="headerlink" href="#ssh_2" title="Permanent link">&para;</a></h3>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>ssh<span class="w"> </span>-p<span class="w"> </span><span class="m">8022</span><span class="w"> </span>user@ip
 </code></pre></div></td></tr></table></div>
+<h3 id="_3">远程主机公钥发生变化<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<p>远程主机发生变化时本地可能会报错：</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code>@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@<span class="w">    </span>WARNING:<span class="w"> </span>REMOTE<span class="w"> </span>HOST<span class="w"> </span>IDENTIFICATION<span class="w"> </span>HAS<span class="w"> </span>CHANGED!<span class="w">     </span>@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+IT<span class="w"> </span>IS<span class="w"> </span>POSSIBLE<span class="w"> </span>THAT<span class="w"> </span>SOMEONE<span class="w"> </span>IS<span class="w"> </span>DOING<span class="w"> </span>SOMETHING<span class="w"> </span>NASTY!
+Someone<span class="w"> </span>could<span class="w"> </span>be<span class="w"> </span>eavesdropping<span class="w"> </span>on<span class="w"> </span>you<span class="w"> </span>right<span class="w"> </span>now<span class="w"> </span><span class="o">(</span>man-in-the-middle<span class="w"> </span>attack<span class="o">)</span>!
+It<span class="w"> </span>is<span class="w"> </span>also<span class="w"> </span>possible<span class="w"> </span>that<span class="w"> </span>a<span class="w"> </span>host<span class="w"> </span>key<span class="w"> </span>has<span class="w"> </span>just<span class="w"> </span>been<span class="w"> </span>changed.
+</code></pre></div></td></tr></table></div>
+<p>ssh服务是通过公钥和私钥来进行连接的，它会把每个曾经访问过计算机或服务器的公钥（public key），记录在~/.ssh/known_hosts 中，当下次访问曾经访问过的计算机或服务器时，ssh就会核对公钥，如果和上次记录的不同，OpenSSH会发出警告。</p>
+<p>解决方法是清除该 ip 地址的记录，然后重新连接。</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>ssh-keygen<span class="w"> </span>-R<span class="w"> </span><span class="o">[</span>ip<span class="o">]</span>:port
+</code></pre></div></td></tr></table></div>
 <h2 id="proot-distro-linux">使用 <code>proot-distro</code> 部署 Linux 环境<a class="headerlink" href="#proot-distro-linux" title="Permanent link">&para;</a></h2>
 <p>建议使用 Debian 而不是 Ubuntu，因为 Ubuntu 的 <code>snap</code> 商店在 <code>proot</code> 中无法使用，而一些应用会强制要求使用 <code>snap</code> 商店，导致无法安装。因此不如直接使用 Debian。</p>
 <h3 id="debian">安装 Debian 并进入环境<a class="headerlink" href="#debian" title="Permanent link">&para;</a></h3>
@@ -4224,7 +4260,7 @@ apt<span class="w"> </span>update
 </code></pre></div></td></tr></table></div>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>fastfetch
 </code></pre></div></td></tr></table></div>
-<h3 id="_3">换源<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<h3 id="_4">换源<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <p>修改 <code>/etc/apt/sources.list</code> 文件。可以将原来的备份一份：</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>cp<span class="w"> </span>/etc/apt/sources.list<span class="w"> </span>/etc/apt/sources.list.backup
 </code></pre></div></td></tr></table></div>
@@ -4274,7 +4310,7 @@ deb https://security.debian.org/debian-security trixie-security main contrib non
 <p>安装完成后运行安装程序</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sh<span class="w"> </span>install.sh
 </code></pre></div></td></tr></table></div>
-<h3 id="_4">修改配置文件<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<h3 id="_5">修改配置文件<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
 <p>先启动一遍来生成配置文件。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>code-server
 </code></pre></div></td></tr></table></div>
@@ -4339,7 +4375,7 @@ sh<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;</spa
 <p>输出应为</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/data/data/com.termux/files/usr/bin/zsh
 </code></pre></div></td></tr></table></div>
-<h3 id="_5">安装自动补全和语法高亮插件<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<h3 id="_6">安装自动补全和语法高亮插件<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
 <h4 id="github">从 github 克隆插件仓库<a class="headerlink" href="#github" title="Permanent link">&para;</a></h4>
 <p>自动补全插件</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>zsh-autosuggestions
@@ -4351,7 +4387,7 @@ sh<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;</spa
 </code></pre></div></td></tr></table></div>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/zsh-users/zsh-syntax-highlighting.git<span class="w"> </span><span class="si">${</span><span class="nv">ZSH_CUSTOM</span><span class="k">:-</span><span class="p">~/.oh-my-zsh/custom</span><span class="si">}</span>/plugins/zsh-syntax-highlighting
 </code></pre></div></td></tr></table></div>
-<h4 id="_6">启用插件<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h4>
+<h4 id="_7">启用插件<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h4>
 <p>使用 nano 打开 <code>~/.zshrc</code> 文件</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>nano<span class="w"> </span>~/.zshrc
 </code></pre></div></td></tr></table></div>
