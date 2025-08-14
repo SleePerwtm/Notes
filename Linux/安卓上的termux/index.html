@@ -957,6 +957,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="安装自动补全和语法高亮插件">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#github" class="md-nav__link">
+    <span class="md-ellipsis">
+      从 github 克隆插件仓库
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      启用插件
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -4082,6 +4106,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="安装自动补全和语法高亮插件">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#github" class="md-nav__link">
+    <span class="md-ellipsis">
+      从 github 克隆插件仓库
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      启用插件
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -4292,6 +4340,7 @@ sh<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;</spa
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/data/data/com.termux/files/usr/bin/zsh
 </code></pre></div></td></tr></table></div>
 <h3 id="_5">安装自动补全和语法高亮插件<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<h4 id="github">从 github 克隆插件仓库<a class="headerlink" href="#github" title="Permanent link">&para;</a></h4>
 <p>自动补全插件</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>zsh-autosuggestions
 </code></pre></div></td></tr></table></div>
@@ -4301,6 +4350,21 @@ sh<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;</spa
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>zsh-syntax-highlighting
 </code></pre></div></td></tr></table></div>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/zsh-users/zsh-syntax-highlighting.git<span class="w"> </span><span class="si">${</span><span class="nv">ZSH_CUSTOM</span><span class="k">:-</span><span class="p">~/.oh-my-zsh/custom</span><span class="si">}</span>/plugins/zsh-syntax-highlighting
+</code></pre></div></td></tr></table></div>
+<h4 id="_6">启用插件<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h4>
+<p>使用 nano 打开 <code>~/.zshrc</code> 文件</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>nano<span class="w"> </span>~/.zshrc
+</code></pre></div></td></tr></table></div>
+<p>编辑 <code>~/.zshrc</code> 文件，找到 <code>plugins</code> 项，添加 <code>zsh-autosuggestions</code> 和 <code>zsh-syntax-highlighting</code> 两个插件。最好换行并在前面加 Tab 键。</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nv">plugins</span><span class="o">=(</span>
+<span class="w">    </span>git
+<span class="w">    </span>zsh-autosuggestions
+<span class="w">    </span>zsh-syntax-highlighting
+<span class="o">)</span>
 </code></pre></div></td></tr></table></div>
 <h3 id="powerlevel10k">切换主题为 powerlevel10k<a class="headerlink" href="#powerlevel10k" title="Permanent link">&para;</a></h3>
 <p>编辑 <code>~/.zshrc</code> 中的 <code>ZSH_THEME</code> 项为 <code>powerlevel10k/powerlevel10k</code></p>
