@@ -6,6 +6,27 @@
 
 浏览器搜索 termux，在 github 页面的 releases 处下载安装包。
 
+## 为 termux 申请手机系统权限
+
+```bash
+termux-setup-storage
+```
+
+## 换源
+
+```bash
+termux-change-repo
+```
+
+选择 china mainland 镜像源组。
+
+## 更新 apt
+
+```bash
+apt upgrade
+apt update
+```
+
 # 使用 ssh 远程连接
 
 ## 安装 openssh
@@ -54,58 +75,38 @@ sshd
 ssh -p 8022 user@ip
 ```
 
-# 部署 code-server
+# 使用 `proot-distro` 部署 Linux 环境
 
-## 为 termux 申请手机系统权限
+建议使用 Debian 而不是 Ubuntu，因为 Ubuntu 的 `snap` 商店在 `proot` 中无法使用，而一些应用会强制要求使用 `snap` 商店，导致无法安装。因此不如直接使用 Debian。
 
-```bash
-termux-setup-storage
-```
+## 安装 Debian 并进入环境
 
-## 换源
-
-```bash
-termux-change-repo
-```
-
-选择 china mainland 镜像源组。
-
-## 更新 apt
-
-```bash
-apt upgrade
-apt update
-```
-
-## 安装 ubuntu 并进入环境
-
-安装所需 proot 组件：
+安装所需 `proot-distro` 组件：
 
 ```bash
 apt install proot-distro
 ```
 
-在 proot-distro 中查看可用 Linux 发行版：
+在 `proot-distro` 中查看可用 Linux 发行版：
 
 ```bash
 proot-distro list
 ```
 
-选择下载 ubuntu：
+选择下载 Debian：
 
 ```bash
-proot-distro install ubuntu
+proot-distro install debian
 ```
-
-下载完成后，进入 ubuntu 环境：
+下载完成后，进入 Debian 环境：
 
 ```bash
-proot-distro login ubuntu
+proot-distro login debian
 ```
 
----
+# 部署 code-server
 
-> 以下均在 ubuntu 环境下执行。
+> 以下均在 `proot-distro` 环境下执行。
 
 ## 安装 code-server
 
