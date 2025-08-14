@@ -104,6 +104,58 @@ proot-distro install debian
 proot-distro login debian
 ```
 
+## 使用 fastfetch 查看系统详细信息
+
+```bash
+apt install fastfetch
+```
+
+```bash
+fastfetch
+```
+
+## 换源
+
+修改 `/etc/apt/sources.list` 文件。可以将原来的备份一份：
+
+```bash
+cp /etc/apt/sources.list /etc/apt/sources.list.backup
+```
+
+使用 nano 编辑 `/etc/apt/sources.list` 文件：
+
+```bash
+nano /etc/apt/sources.list
+```
+
+添加国内镜像源（以清华源为例）
+
+[清华大学镜像站 debian 源使用说明网站](https://mirrors.tuna.tsinghua.edu.cn/help/debian/)
+
+注意选择对应的 debian 版本的镜像源，例如 `Debian 13 (trixie)`
+
+```text
+# 默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释
+deb https://mirrors.tuna.tsinghua.edu.cn/debian/ trixie main contrib non-free non-free-firmware
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ trixie main contrib non-free non-free-firmware
+
+deb https://mirrors.tuna.tsinghua.edu.cn/debian/ trixie-updates main contrib non-free non-free-firmware
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ trixie-updates main contrib non-free non-free-firmware
+
+deb https://mirrors.tuna.tsinghua.edu.cn/debian/ trixie-backports main contrib non-free non-free-firmware
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ trixie-backports main contrib non-free non-free-firmware
+
+# 以下安全更新软件源包含了官方源与镜像站配置，如有需要可自行修改注释切换
+deb https://security.debian.org/debian-security trixie-security main contrib non-free non-free-firmware
+# deb-src https://security.debian.org/debian-security trixie-security main contrib non-free non-free-firmware
+```
+
+在这之后更新下软件源
+
+```bash
+apt update
+```
+
 # 部署 code-server
 
 > 以下均在 `proot-distro` 环境下执行。
