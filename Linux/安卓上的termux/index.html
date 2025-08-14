@@ -848,6 +848,24 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#fastfetch" class="md-nav__link">
+    <span class="md-ellipsis">
+      使用 fastfetch 查看系统详细信息
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      换源
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -873,7 +891,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       修改配置文件
     </span>
@@ -933,7 +951,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
       安装自动补全和语法高亮插件
     </span>
@@ -3955,6 +3973,24 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#fastfetch" class="md-nav__link">
+    <span class="md-ellipsis">
+      使用 fastfetch 查看系统详细信息
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      换源
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -3980,7 +4016,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       修改配置文件
     </span>
@@ -4040,7 +4076,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
       安装自动补全和语法高亮插件
     </span>
@@ -4135,6 +4171,50 @@ apt<span class="w"> </span>update
 下载完成后，进入 Debian 环境：</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>proot-distro<span class="w"> </span>login<span class="w"> </span>debian
 </code></pre></div></td></tr></table></div>
+<h3 id="fastfetch">使用 fastfetch 查看系统详细信息<a class="headerlink" href="#fastfetch" title="Permanent link">&para;</a></h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>apt<span class="w"> </span>install<span class="w"> </span>fastfetch
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>fastfetch
+</code></pre></div></td></tr></table></div>
+<h3 id="_3">换源<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<p>修改 <code>/etc/apt/sources.list</code> 文件。可以将原来的备份一份：</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>cp<span class="w"> </span>/etc/apt/sources.list<span class="w"> </span>/etc/apt/sources.list.backup
+</code></pre></div></td></tr></table></div>
+<p>使用 nano 编辑 <code>/etc/apt/sources.list</code> 文件：</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>nano<span class="w"> </span>/etc/apt/sources.list
+</code></pre></div></td></tr></table></div>
+<p>添加国内镜像源（以清华源为例）</p>
+<p><a href="https://mirrors.tuna.tsinghua.edu.cn/help/debian/">清华大学镜像站 debian 源使用说明网站</a></p>
+<p>注意选择对应的 debian 版本的镜像源，例如 <code>Debian 13 (trixie)</code></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code># 默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释
+deb https://mirrors.tuna.tsinghua.edu.cn/debian/ trixie main contrib non-free non-free-firmware
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ trixie main contrib non-free non-free-firmware
+
+deb https://mirrors.tuna.tsinghua.edu.cn/debian/ trixie-updates main contrib non-free non-free-firmware
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ trixie-updates main contrib non-free non-free-firmware
+
+deb https://mirrors.tuna.tsinghua.edu.cn/debian/ trixie-backports main contrib non-free non-free-firmware
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ trixie-backports main contrib non-free non-free-firmware
+
+# 以下安全更新软件源包含了官方源与镜像站配置，如有需要可自行修改注释切换
+deb https://security.debian.org/debian-security trixie-security main contrib non-free non-free-firmware
+# deb-src https://security.debian.org/debian-security trixie-security main contrib non-free non-free-firmware
+</code></pre></div></td></tr></table></div>
+<p>在这之后更新下软件源</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>apt<span class="w"> </span>update
+</code></pre></div></td></tr></table></div>
 <h2 id="code-server">部署 code-server<a class="headerlink" href="#code-server" title="Permanent link">&para;</a></h2>
 <blockquote>
 <p>以下均在 <code>proot-distro</code> 环境下执行。</p>
@@ -4146,7 +4226,7 @@ apt<span class="w"> </span>update
 <p>安装完成后运行安装程序</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sh<span class="w"> </span>install.sh
 </code></pre></div></td></tr></table></div>
-<h3 id="_3">修改配置文件<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<h3 id="_4">修改配置文件<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <p>先启动一遍来生成配置文件。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>code-server
 </code></pre></div></td></tr></table></div>
@@ -4211,7 +4291,7 @@ sh<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;</spa
 <p>输出应为</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/data/data/com.termux/files/usr/bin/zsh
 </code></pre></div></td></tr></table></div>
-<h3 id="_4">安装自动补全和语法高亮插件<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<h3 id="_5">安装自动补全和语法高亮插件<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
 <p>自动补全插件</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>zsh-autosuggestions
 </code></pre></div></td></tr></table></div>
