@@ -37,3 +37,35 @@ wsl --install
 ## 下载 Linux 发行版
 
 在 Microsoft Store 中搜索并下载需要的 Linux 发行版。
+
+# 在 WSL 中使用 Windows 代理
+
+WSL 和 Windows 共享端口，因此可以使用 Windows 上的代理端口来给 WSL 进行加速。
+
+## 使用 `proxychains` 工具
+
+### 安装 `proxychains`
+
+```bash
+sudo apt install proxychains
+```
+
+安装完成后，编辑 `/etc/proxychains.conf` 文件：
+
+```bash
+sudo nano /etc/proxychains.conf
+```
+
+修改最后一行的端口为 Windows 上的代理端口，例如：
+
+```text
+socks5 127.0.0.1 7897
+```
+
+### 使用 `proxychains`
+
+在需要使用代理的命令前加上 `proxychains`，例如：
+
+```bash
+proxychains git clone https://github.com/xxx/xxx
+```
