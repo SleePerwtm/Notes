@@ -16,7 +16,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.16">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.18">
     
     
       
@@ -747,6 +747,54 @@
       下载 Linux 发行版
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wsl-windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      在 WSL 中使用 Windows 代理
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="在 WSL 中使用 Windows 代理">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#proxychains" class="md-nav__link">
+    <span class="md-ellipsis">
+      使用 proxychains 工具
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="使用 proxychains 工具">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#proxychains_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      安装 proxychains
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proxychains_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      使用 proxychains
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -3708,6 +3756,54 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#wsl-windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      在 WSL 中使用 Windows 代理
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="在 WSL 中使用 Windows 代理">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#proxychains" class="md-nav__link">
+    <span class="md-ellipsis">
+      使用 proxychains 工具
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="使用 proxychains 工具">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#proxychains_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      安装 proxychains
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proxychains_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      使用 proxychains
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3752,6 +3848,22 @@
 </code></pre></div></td></tr></table></div>
 <h3 id="linux">下载 Linux 发行版<a class="headerlink" href="#linux" title="Permanent link">&para;</a></h3>
 <p>在 Microsoft Store 中搜索并下载需要的 Linux 发行版。</p>
+<h2 id="wsl-windows">在 WSL 中使用 Windows 代理<a class="headerlink" href="#wsl-windows" title="Permanent link">&para;</a></h2>
+<p>WSL 和 Windows 共享端口，因此可以使用 Windows 上的代理端口来给 WSL 进行加速。</p>
+<h3 id="proxychains">使用 <code>proxychains</code> 工具<a class="headerlink" href="#proxychains" title="Permanent link">&para;</a></h3>
+<h4 id="proxychains_1">安装 <code>proxychains</code><a class="headerlink" href="#proxychains_1" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>proxychains
+</code></pre></div></td></tr></table></div>
+<p>安装完成后，编辑 <code>/etc/proxychains.conf</code> 文件：</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>nano<span class="w"> </span>/etc/proxychains.conf
+</code></pre></div></td></tr></table></div>
+<p>修改最后一行的端口为 Windows 上的代理端口，例如：</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>socks5 127.0.0.1 7897
+</code></pre></div></td></tr></table></div>
+<h4 id="proxychains_2">使用 <code>proxychains</code><a class="headerlink" href="#proxychains_2" title="Permanent link">&para;</a></h4>
+<p>在需要使用代理的命令前加上 <code>proxychains</code>，例如：</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>proxychains<span class="w"> </span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/xxx/xxx
+</code></pre></div></td></tr></table></div>
 
 
 
@@ -3800,10 +3912,10 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.50899def.min.js"></script>
+      <script src="../../assets/javascripts/bundle.92b07e13.min.js"></script>
       
         <script src="/js/config.js"></script>
       
