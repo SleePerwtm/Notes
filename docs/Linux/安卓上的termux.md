@@ -177,6 +177,12 @@ deb https://security.debian.org/debian-security trixie-security main contrib non
 apt update
 ```
 
+如果显示 `SSL connection failed` 等无法连接 https 的问题，可能由于缺失了 `apt-transport-https` 和 `ca-certificates`，安装这两个包后再进行更新：
+
+```bash
+apt install apt-transport-https ca-certificates
+```
+
 # 部署 code-server
 
 > 以下均在 `proot-distro` 环境下执行。
