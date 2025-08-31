@@ -4317,6 +4317,9 @@ deb https://security.debian.org/debian-security trixie-security main contrib non
 <p>在这之后更新下软件源</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>apt<span class="w"> </span>update
 </code></pre></div></td></tr></table></div>
+<p>如果显示 <code>SSL connection failed</code> 等无法连接 https 的问题，可能由于缺失了 <code>apt-transport-https</code> 和 <code>ca-certificates</code>，安装这两个包后再进行更新：</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>apt<span class="w"> </span>install<span class="w"> </span>apt-transport-https<span class="w"> </span>ca-certificates
+</code></pre></div></td></tr></table></div>
 <h2 id="code-server">部署 code-server<a class="headerlink" href="#code-server" title="Permanent link">&para;</a></h2>
 <blockquote>
 <p>以下均在 <code>proot-distro</code> 环境下执行。</p>
