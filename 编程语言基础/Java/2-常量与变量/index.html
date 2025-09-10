@@ -3087,7 +3087,7 @@
           <li class="md-nav__item">
   <a href="#_23" class="md-nav__link">
     <span class="md-ellipsis">
-      不兼容类型的转换（无法转换）
+      不兼容的类型转换（无法转换）
     </span>
   </a>
   
@@ -4414,7 +4414,7 @@
           <li class="md-nav__item">
   <a href="#_23" class="md-nav__link">
     <span class="md-ellipsis">
-      不兼容类型的转换（无法转换）
+      不兼容的类型转换（无法转换）
     </span>
   </a>
   
@@ -4735,11 +4735,12 @@ double， double的取值范围是大于float的，类型不兼容。</li>
 <li>适用场景：<code>long → int</code>、<code>double → int</code>、<code>float → byte</code> 等（大范围类型 → 小范围类型）。</li>
 <li><strong>风险</strong>：可能导致“数据溢出”或“精度丢失”（因为小范围类型无法完全容纳大范围类型的值）。</li>
 </ul>
-<h4 id="_23">不兼容类型的转换（无法转换）<a class="headerlink" href="#_23" title="Permanent link">&para;</a></h4>
+<h4 id="_23">不兼容的类型转换（无法转换）<a class="headerlink" href="#_23" title="Permanent link">&para;</a></h4>
 <blockquote>
 <p>与 C/C++ 不同，Java <strong>不允许</strong>将 <code>boolean</code> 类型转换为<em>整型</em>，也<strong>不允许</strong><em>整型</em>转换为 <code>boolean</code> 类型。</p>
 </blockquote>
 <p>若两种数据类型完全不兼容（如 <code>String</code> 与 <code>int</code>、<code>boolean</code> 与 <code>int</code>），则无法进行自动或强制转换，否则编译报错。</p>
+<p><strong><code>boolean</code> 类型不能与其他基本数据类型进行转换。</strong></p>
 <p><strong>错误示例</strong>：
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
