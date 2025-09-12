@@ -12,7 +12,7 @@
         <link rel="prev" href="../1-Java%E6%A6%82%E8%BF%B0/">
       
       
-        <link rel="next" href="../../Python/Python%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">
+        <link rel="next" href="../3-%E8%BF%90%E7%AE%97%E7%AC%A6/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -3055,11 +3055,6 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-        
           <li class="md-nav__item">
   <a href="#_21" class="md-nav__link">
     <span class="md-ellipsis">
@@ -3067,8 +3062,7 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="强制类型转换（显式转换）">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
   <a href="#_22" class="md-nav__link">
@@ -3102,6 +3096,52 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3-%E8%BF%90%E7%AE%97%E7%AC%A6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    3 运算符
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../4-%E8%BE%93%E5%85%A5%E4%B8%8E%E8%BE%93%E5%87%BA/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    4 输入与输出
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -4382,11 +4422,6 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-        
           <li class="md-nav__item">
   <a href="#_21" class="md-nav__link">
     <span class="md-ellipsis">
@@ -4394,8 +4429,7 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="强制类型转换（显式转换）">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
   <a href="#_22" class="md-nav__link">
@@ -4443,7 +4477,7 @@
 
   <h1>2 常量与变量</h1>
 
-<h3 id="_1">关键字<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<h2 id="_1">关键字<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>Java 中的关键字<strong>都是小写</strong>，且不能作为标识符（如变量名、类名）使用。关键字用于定义 Java 程序的结构、控制流程、数据类型等核心逻辑，以下是按功能分类的常见关键字：</p>
 <table>
 <thead>
@@ -4480,9 +4514,9 @@
 </tbody>
 </table>
 <p><strong>注意</strong>：<code>true</code>、<code>false</code>、<code>null</code> 虽然常用且符合关键字的“小写”特征，但它们是<strong>字面量</strong>，并非关键字，不过同样不能作为标识符使用。</p>
-<h3 id="_2">标识符<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<h2 id="_2">标识符<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>标识符是 Java 中用于给类、变量、方法、包等命名的符号。</p>
-<h4 id="_3">命名规则（硬性要求）<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
+<h3 id="_3">命名规则（硬性要求）<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <p>必须遵循以下规则，否则会编译报错：</p>
 <ul>
 <li>由字母（A-Z、a-z）、数字（0-9）、下划线（<code>_</code>）、美元符号（<code>$</code>）组成。</li>
@@ -4491,7 +4525,7 @@
 <li>区分大小写（例如 <code>Name</code> 和 <code>name</code> 是两个不同的标识符）。</li>
 <li>无长度限制，但建议简洁易懂（过长的标识符会降低代码可读性）。</li>
 </ul>
-<h4 id="_4">命名规范（软性建议，行业通用）<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
+<h3 id="_4">命名规范（软性建议，行业通用）<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <p>遵循规范可提高代码的可读性和团队协作效率，主流规范如下：</p>
 <ul>
 <li><strong>类名/接口名</strong>：采用“帕斯卡命名法（大驼峰命名法）”，每个单词首字母大写，其余小写。
@@ -4503,9 +4537,9 @@
 <li><strong>包名</strong>：全部小写，多层级包用小数点（<code>.</code>）分隔，通常以公司域名倒写开头（避免命名冲突）。
   示例：<code>com.company.project.util</code>（工具类包）、<code>com.company.project.entity</code>（实体类包）。</li>
 </ul>
-<h3 id="_5">基本数据类型<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<h2 id="_5">基本数据类型<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
 <p>Java 是<strong>强类型语言</strong>，变量在使用前必须声明数据类型，且数据类型一旦确定，不可随意更改。Java 数据类型分为两大类：<strong>基本数据类型</strong>和<strong>引用数据类型</strong>。</p>
-<h4 id="8">基本数据类型（8种，直接存储值）<a class="headerlink" href="#8" title="Permanent link">&para;</a></h4>
+<h3 id="8">基本数据类型（8种，直接存储值）<a class="headerlink" href="#8" title="Permanent link">&para;</a></h3>
 <p>基本数据类型是 Java 内置的基础类型，直接存储数据本身，而非内存地址，分为四类八种：</p>
 <table>
 <thead>
@@ -4623,12 +4657,14 @@
 <span class="kt">boolean</span><span class="w"> </span><span class="n">isPass</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span><span class="w">         </span><span class="c1">// 是否通过考试</span>
 <span class="kt">boolean</span><span class="w"> </span><span class="n">hasLogin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span><span class="w">      </span><span class="c1">// 是否登录</span>
 </code></pre></div></td></tr></table></div>
-<h4 id="_6">引用数据类型（存储内存地址）<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h4>
-<p>引用数据类型不直接存储数据，而是存储数据在内存中的“地址”，通过地址引用实际数据。常见的引用数据类型包括：
-- 类（Class）：如 <code>String</code>（字符串类）、<code>Integer</code>（包装类）、自定义类（如 <code>User</code>）。
-- 接口（Interface）：如 <code>List</code>、<code>Map</code>。
-- 数组（Array）：如 <code>int[]</code>（整数数组）、<code>String[]</code>（字符串数组）。
-- 枚举（Enum）、注解（Annotation）等。</p>
+<h3 id="_6">引用数据类型（存储内存地址）<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<p>引用数据类型不直接存储数据，而是存储数据在内存中的“地址”，通过地址引用实际数据。常见的引用数据类型包括：</p>
+<ul>
+<li>类（Class）：如 <code>String</code>（字符串类）、<code>Integer</code>（包装类）、自定义类（如 <code>User</code>）。</li>
+<li>接口（Interface）：如 <code>List</code>、<code>Map</code>。</li>
+<li>数组（Array）：如 <code>int[]</code>（整数数组）、<code>String[]</code>（字符串数组）。</li>
+<li>枚举（Enum）、注解（Annotation）等。</li>
+</ul>
 <p><strong>示例代码</strong>：</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
@@ -4648,7 +4684,7 @@
 <span class="kd">class</span> <span class="nc">User</span><span class="w"> </span><span class="p">{}</span>
 <span class="n">User</span><span class="w"> </span><span class="n">user</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">User</span><span class="p">();</span><span class="w">  </span><span class="c1">// user 存储 User 对象的内存地址</span>
 </code></pre></div></td></tr></table></div>
-<h4 id="_7">基本类型与引用类型的核心区别<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h4>
+<h3 id="_7">基本类型与引用类型的核心区别<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
@@ -4680,34 +4716,36 @@
 </tr>
 </tbody>
 </table>
-<h3 id="_8">常量<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<h2 id="_8">常量<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
 <p>常量是指在程序运行过程中，<strong>值不能被修改</strong>的量。Java 中定义常量需使用 <code>final</code> 关键字修饰，通常结合命名规范（全部大写）使用。</p>
-<h4 id="_9">常量的分类<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h4>
+<h3 id="_9">常量的分类<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
 <p>根据作用范围，常量可分为以下两类：</p>
-<h5 id="_10">字面值常量<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h5>
-<p>直接在代码中写死的值，无需定义，可直接使用，对应基本数据类型和字符串类型：
-- 整数常量：如 <code>123</code>（int 类型）、<code>100L</code>（long 类型）、<code>0xFF</code>（十六进制，对应 255）。
-- 浮点常量：如 <code>3.14</code>（double 类型）、<code>2.5F</code>（float 类型）。
-- 字符常量：如 <code>'a'</code>、<code>'5'</code>、<code>'中'</code>。
-- 布尔常量：<code>true</code>、<code>false</code>。
-- 字符串常量：如 <code>"Hello"</code>、<code>"Java 基础"</code>（注意用双引号包裹）。
-- 空常量：<code>null</code>（仅引用类型可用，表示无对象引用）。</p>
-<h5 id="_11">自定义常量<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h5>
+<h4 id="_10">字面值常量<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h4>
+<p>直接在代码中写死的值，无需定义，可直接使用，对应基本数据类型和字符串类型：</p>
+<ul>
+<li>整数常量：如 <code>123</code>（int 类型）、<code>100L</code>（long 类型）、<code>0xFF</code>（十六进制，对应 255）。</li>
+<li>浮点常量：如 <code>3.14</code>（double 类型）、<code>2.5F</code>（float 类型）。</li>
+<li>字符常量：如 <code>'a'</code>、<code>'5'</code>、<code>'中'</code>。</li>
+<li>布尔常量：<code>true</code>、<code>false</code>。</li>
+<li>字符串常量：如 <code>"Hello"</code>、<code>"Java 基础"</code>（注意用双引号包裹）。</li>
+<li>空常量：<code>null</code>（仅引用类型可用，表示无对象引用）。</li>
+</ul>
+<h4 id="_11">自定义常量<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h4>
 <p>使用 <code>final</code> 关键字定义的常量，一旦赋值，后续无法修改。语法格式：</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">// 语法：final 数据类型 常量名 = 常量值;</span>
 <span class="kd">final</span><span class="w"> </span><span class="n">数据类型</span><span class="w"> </span><span class="n">常量名</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">常量值</span><span class="p">;</span>
 </code></pre></div></td></tr></table></div>
-<h3 id="_12">变量<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
+<h2 id="_12">变量<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h2>
 <p>变量是程序运行过程中，<strong>值可以被修改</strong>的量。Java 作为强类型语言，变量必须先声明（指定数据类型），再赋值（赋予具体值），最后才能使用。</p>
-<h4 id="_13">变量的声明与赋值<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h4>
-<h5 id="_14">声明变量<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h5>
+<h3 id="_13">变量的声明与赋值<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h3>
+<h4 id="_14">声明变量<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h4>
 <p>语法：<code>数据类型 变量名;</code>（仅声明类型，未赋值时，变量为默认值，但局部变量无默认值，必须手动赋值后才能使用）。</p>
-<h5 id="_15">赋值变量<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h5>
+<h4 id="_15">赋值变量<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h4>
 <p>语法：<code>变量名 = 值;</code>（赋值符号 <code>=</code> 表示将右侧的值赋给左侧的变量）。</p>
-<h5 id="_16">声明并赋值<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h5>
+<h4 id="_16">声明并赋值<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h4>
 <p>语法：<code>数据类型 变量名 = 值;</code>（一步完成，简洁高效）。</p>
-<h4 id="_17">使用变量时的注意事项<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h4>
+<h3 id="_17">使用变量时的注意事项<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h3>
 <ol>
 <li>在同一对花括号中，变量名不能重复。</li>
 <li>变量在使用之前，必须初始化（赋值）。</li>
@@ -4716,11 +4754,11 @@
 <li>定义float类型的变量时，需要在小数的后面加F（大小写均可，建议大写）。因为浮点数的默认类型是
 double， double的取值范围是大于float的，类型不兼容。</li>
 </ol>
-<h3 id="_18">类型转换<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h3>
+<h2 id="_18">类型转换<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h2>
 <p>由于 Java 是强类型语言，不同数据类型之间的赋值需要进行“类型转换”。类型转换分为两种：自动类型转换（隐式转换）和强制类型转换（显式转换）。</p>
-<h4 id="_19">自动类型转换（隐式转换）<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h4>
+<h3 id="_19">自动类型转换（隐式转换）<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h3>
 <p>当两种数据类型兼容，且目标类型的“取值范围”大于源类型时，Java 会自动完成转换，无需手动干预。</p>
-<h5 id="_20">转换规则<a class="headerlink" href="#_20" title="Permanent link">&para;</a></h5>
+<h4 id="_20">转换规则<a class="headerlink" href="#_20" title="Permanent link">&para;</a></h4>
 <ul>
 <li>整数型之间：<code>byte → short → int → long</code>（范围从小到大，自动转换）。</li>
 <li>整数型转浮点型：<code>int → float → double</code>、<code>long → double</code>（浮点型范围大于整数型）。</li>
@@ -4729,19 +4767,19 @@ double， double的取值范围是大于float的，类型不兼容。</li>
 <p><strong>核心原则</strong>：<strong>小范围类型 → 大范围类型</strong>（避免数据丢失）。</p>
 <h4 id="_21">强制类型转换（显式转换）<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h4>
 <p>当两种数据类型兼容，但目标类型的“取值范围”小于源类型时，需要手动使用“强制转换符”<code>(目标类型)</code> 进行转换。</p>
-<h5 id="_22">转换规则<a class="headerlink" href="#_22" title="Permanent link">&para;</a></h5>
+<h4 id="_22">转换规则<a class="headerlink" href="#_22" title="Permanent link">&para;</a></h4>
 <ul>
 <li>语法：<code>目标类型 变量名 = (目标类型) 源变量;</code></li>
 <li>适用场景：<code>long → int</code>、<code>double → int</code>、<code>float → byte</code> 等（大范围类型 → 小范围类型）。</li>
 <li><strong>风险</strong>：可能导致“数据溢出”或“精度丢失”（因为小范围类型无法完全容纳大范围类型的值）。</li>
 </ul>
-<h4 id="_23">不兼容的类型转换（无法转换）<a class="headerlink" href="#_23" title="Permanent link">&para;</a></h4>
+<h3 id="_23">不兼容的类型转换（无法转换）<a class="headerlink" href="#_23" title="Permanent link">&para;</a></h3>
 <blockquote>
 <p>与 C/C++ 不同，Java <strong>不允许</strong>将 <code>boolean</code> 类型转换为<em>整型</em>，也<strong>不允许</strong><em>整型</em>转换为 <code>boolean</code> 类型。</p>
 </blockquote>
 <p>若两种数据类型完全不兼容（如 <code>String</code> 与 <code>int</code>、<code>boolean</code> 与 <code>int</code>），则无法进行自动或强制转换，否则编译报错。</p>
 <p><strong><code>boolean</code> 类型不能与其他基本数据类型进行转换。</strong></p>
-<p><strong>错误示例</strong>：
+<p><strong>错误示例</strong>：</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -4755,7 +4793,7 @@ double， double的取值范围是大于float的，类型不兼容。</li>
 <span class="c1">// 2. boolean → int（不兼容，无法转换）</span>
 <span class="kt">boolean</span><span class="w"> </span><span class="n">flag</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
 <span class="c1">// int b = (int) flag; // 编译报错：不兼容的类型</span>
-</code></pre></div></td></tr></table></div></p>
+</code></pre></div></td></tr></table></div>
 
 
 
