@@ -27,6 +27,42 @@ apt upgrade
 apt update
 ```
 
+# 安装桌面环境
+
+## 安装 termux:x11
+
+在 github 页面的 releases 处下载安装包。
+
+## 安装 x11-repo
+
+```bash
+apt install x11-repo
+```
+
+## 安装 termux-x11-nightly
+
+```bash
+apt install termux-x11-nightly
+```
+
+## 安装桌面环境
+
+```bash
+apt install xfce4
+```
+
+## 连接 termux:x11
+
+```bash
+termux-x11 :0 &/dev/null &
+```
+
+## 启动桌面环境
+
+```bash
+startxfce4 &>/dev/null &
+```
+
 # 使用 ssh 远程连接
 
 ## 安装 openssh
@@ -374,3 +410,77 @@ source ~/.zshrc
 ```bash
 p10k configure
 ```
+
+# 使用 fish 代替 bash
+
+## 安装 fish
+
+```bash
+apt install fish
+```
+
+## 设置 fish 为默认终端
+
+```bash
+chsh -s fish
+```
+
+重启终端后检查是否为 fish
+
+```bash
+echo $SHELL
+```
+
+## 配置 fish
+
+```bash
+fish_config
+```
+
+可以启动一个配置 fish 的网页。
+
+# Debian 添加用户
+
+## 使用 adduser 命令添加用户
+
+当执行 `adduser` 提示命令不存在时，需要先安装 `adduser` 包：
+
+```bash
+apt install adduser
+```
+
+然后执行 `adduser` 命令添加用户：
+
+```bash
+adduser username
+```
+
+## 设置密码
+
+```bash
+passwd username
+```
+
+## 切换到新用户
+
+```bash
+su - username
+```
+
+# sudo 的使用
+
+## 安装 sudo
+
+```bash
+apt install sudo
+```
+
+## 添加用户的 sudo 权限
+
+```bash
+nano /etc/sudoers
+```
+
+编辑 `/etc/sudoers` 文件，找到 `root ALL=(ALL:ALL) ALL` 这一行，在后面添加 `username ALL=(ALL:ALL) ALL` 这一行。
+
+如果想每次使用 sudo 时不输入密码，可以将刚添加的改为 `username ALL=(ALL:ALL) NOPASSWD:ALL`。
