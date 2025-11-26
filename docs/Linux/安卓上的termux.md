@@ -1,3 +1,5 @@
+## 参考文章
+
 [【高级终端Termux】在安卓手机/平板上使用Termux 搭建 Debian 环境并运行 PC 级 Linux 应用教程（含安装WPS,VS Code）](https://blog.csdn.net/2301_81229576/article/details/145148000)
 
 安装 ubuntu 的教程：[文章](https://blog.csdn.net/qdhugo/article/details/120721535)
@@ -213,11 +215,12 @@ deb https://security.debian.org/debian-security trixie-security main contrib non
 apt update
 ```
 
-如果显示 `SSL connection failed` 等无法连接 https 的问题，可能由于缺失了 `apt-transport-https` 和 `ca-certificates`，安装这两个包后再进行更新：
+!!! tip
+    如果显示 `SSL connection failed` 等无法连接 https 的问题，可能由于缺失了 `apt-transport-https` 和 `ca-certificates`，安装这两个包后再进行更新：
 
-```bash
-apt install apt-transport-https ca-certificates
-```
+    ```bash
+    apt install apt-transport-https ca-certificates
+    ```
 
 # 部署 code-server
 
@@ -328,7 +331,7 @@ bash -c "$(curl -fsSL https://git.io/oh-my-termux)"
 ## 设置 zsh 为默认终端
 
 ```bash
-chsh -s zsh
+chsh -s /bin/zsh
 ```
 
 重启终端后检查是否为 zsh
@@ -422,7 +425,7 @@ apt install fish
 ## 设置 fish 为默认终端
 
 ```bash
-chsh -s fish
+chsh -s /bin/fish
 ```
 
 重启终端后检查是否为 fish
