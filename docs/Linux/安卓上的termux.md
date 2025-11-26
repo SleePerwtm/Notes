@@ -331,7 +331,7 @@ bash -c "$(curl -fsSL https://git.io/oh-my-termux)"
 ## 设置 zsh 为默认终端
 
 ```bash
-chsh -s zsh
+chsh -s /bin/zsh
 ```
 
 重启终端后检查是否为 zsh
@@ -425,7 +425,7 @@ apt install fish
 ## 设置 fish 为默认终端
 
 ```bash
-chsh -s fish
+chsh -s /bin/fish
 ```
 
 重启终端后检查是否为 fish
