@@ -38,6 +38,11 @@ markdown_extensions:
   - pymdownx.keys
   - pymdownx.snippets
 
+  # 提示块支持，来自 Material for MkDocs 文档
+  - admonition # 提示块
+  - pymdownx.details # 使提示块可折叠
+  - pymdownx.superfences # 允许在提示框内嵌套代码和内容块
+
 extra_javascript:
   - /js/config.js
 
