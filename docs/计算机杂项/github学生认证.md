@@ -20,7 +20,7 @@
 
 ![billing:payment_information](assets/github学生认证-payment_information.png)
 
-!!! caution 注意！
+!!! warning "注意！"
     这个地方的填写，Address需要填写你学校的具体位置，你可以选择使用[百度地图](https://map.baidu.com/)查找到你学校的具体位置，然后使用翻译软件去翻译成英文填写。
     姓名填写本人的姓名拼音，注意大小写，比如张三，First Name 填写 San， Last Name 填写 Zhang。
 
@@ -67,7 +67,7 @@ Validate Until:07/2026
 证明材料，和前面的方式一样，使用文本文档然后拍照的形式：
 
 ```
-Student xxx（姓名和前面一致）,is allowed to study via distance learning in xxx（学校英文名，和前面一致）
+Student xxx（姓名和前面一致）, is allowed to study via distance learning in xxx（学校英文名，和前面一致）
 ```
 
 注意拍完整。
