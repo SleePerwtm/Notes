@@ -44,7 +44,8 @@ markdown_extensions:
   - pymdownx.superfences # 允许在提示框内嵌套代码和内容块
 
   # 内容标签支持，来自 Material for MkDocs 文档
-  - pymdownx.tabbed # 启用标签扩展
+  - pymdownx.tabbed: # 启用标签扩展
+      alternate_style: true
   - pymdownx.superfences # 允许在标签内嵌套代码和内容块
 
 extra_javascript:
