@@ -43,6 +43,10 @@ markdown_extensions:
   - pymdownx.details # 使提示块可折叠
   - pymdownx.superfences # 允许在提示框内嵌套代码和内容块
 
+  # 内容标签支持，来自 Material for MkDocs 文档
+  - pymdownx.tabbed # 启用标签扩展
+  - pymdownx.superfences # 允许在标签内嵌套代码和内容块
+
 extra_javascript:
   - /js/config.js
 
