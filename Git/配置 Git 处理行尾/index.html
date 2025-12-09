@@ -5399,7 +5399,9 @@
 <p>你可以配置 Git 自动处理行结束符，以便与使用不同操作系统的人员有效协作。</p>
 <h3 id="_2">行结束符的全局设置<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <p><code>git config core.autocrlf</code> 命令用于更改 Git 处理行结束符的方式。它接受单个参数。</p>
-<div class="tabbed-set" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">Windows</label><div class="tabbed-content">
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Windows</label><label for="__tabbed_1_2">Mac</label><label for="__tabbed_1_3">Linux</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <p>在 Windows 上，你只需将 <code>true</code> 传递给配置。例如：</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
@@ -5408,19 +5410,20 @@
 <span class="c"># For compatibility, line endings are converted to Unix style when you commit files.</span>
 </code></pre></div></td></tr></table></div>
 </div>
-<input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">Mac</label><div class="tabbed-content">
+<div class="tabbed-block">
 <p>在 macOS 上，您只需将 <code>input</code> 传递给配置。例如：</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>core.autocrlf<span class="w"> </span>input
 <span class="c1"># Configure Git to ensure line endings in files you checkout are correct for macOS</span>
 </code></pre></div></td></tr></table></div>
 </div>
-<input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><label for="__tabbed_1_3">Linux</label><div class="tabbed-content">
+<div class="tabbed-block">
 <p>在 Linux 上，您只需将 <code>input</code> 传递给配置。例如：</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>core.autocrlf<span class="w"> </span>input
 <span class="c1"># Configure Git to ensure line endings in files you checkout are correct for Linux</span>
 </code></pre></div></td></tr></table></div>
+</div>
 </div>
 </div>
 <h3 id="_3">仓库级别设置<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
