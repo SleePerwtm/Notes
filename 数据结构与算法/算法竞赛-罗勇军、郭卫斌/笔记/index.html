@@ -3474,6 +3474,62 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="1.2 队列">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#121-stl-queue" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2.1 STL queue
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#122" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2.2 手写循环队列
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#123" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2.3 双端队列
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.2.3 双端队列">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        经典应用：单调队列
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
       </ul>
@@ -6398,6 +6454,62 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="1.2 队列">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#121-stl-queue" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2.1 STL queue
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#122" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2.2 手写循环队列
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#123" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2.3 双端队列
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.2.3 双端队列">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        经典应用：单调队列
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
       </ul>
@@ -6468,6 +6580,50 @@
 <p>链队列可以看作是<em>单链表的一种特殊情况</em>。</p>
 <p>循环队列是一种<em>顺序表</em>，在一组连续的存储单元中存储数据元素，利用<strong>头指针</strong>和<strong>尾指针</strong>分别指向队首元素和队尾元素，通过<strong>模运算</strong>实现循环。</p>
 <p><em>循环队列</em>能<strong>解决溢出问题</strong>。不循环的话，两个指针一直向后移动，最终会超出存储范围，造成溢出。</p>
+<p>队列和栈的主要问题是查找较慢，需要从头到尾一个一个查找，时间复杂度为 O(n)。某些情况下可以使用<strong>优先队列</strong>，使<em>优先级最高（最大、最小）</em>的数先出队。</p>
+<p><img alt="图1.2-队列" src="../assets/%E7%AC%94%E8%AE%B0-%E5%9B%BE1.2-%E9%98%9F%E5%88%97.png" /></p>
+<p>竞赛中一般使用 <strong>STL queue</strong> 或者<strong>手写静态数组</strong>来实现队列。</p>
+<h4 id="121-stl-queue">1.2.1 STL queue<a class="headerlink" href="#121-stl-queue" title="Permanent link">&para;</a></h4>
+<p>主要操作：</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">queue</span><span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;</span><span class="w"> </span><span class="n">q</span><span class="p">;</span><span class="w"> </span><span class="c1">// 定义元素类型为 Type 的队列 q</span>
+<span class="n">q</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">item</span><span class="p">);</span><span class="w"> </span><span class="c1">// 向队尾插入元素 item</span>
+<span class="n">q</span><span class="p">.</span><span class="n">front</span><span class="p">();</span><span class="w"> </span><span class="c1">// 返回队头元素，但不删除</span>
+<span class="n">q</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span><span class="w"> </span><span class="c1">// 删除队头元素</span>
+<span class="n">q</span><span class="p">.</span><span class="n">back</span><span class="p">();</span><span class="w"> </span><span class="c1">// 返回队尾元素，但不删除</span>
+<span class="n">q</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="w"> </span><span class="c1">// 返回队列中元素的个数</span>
+<span class="n">q</span><span class="p">.</span><span class="n">empty</span><span class="p">();</span><span class="w"> </span><span class="c1">// 判断队列是否为空</span>
+</code></pre></div></td></tr></table></div>
+<h4 id="122">1.2.2 手写循环队列<a class="headerlink" href="#122" title="Permanent link">&para;</a></h4>
+<p>竞赛中一般使用静态分配的数组来实现循环队列。</p>
+<h4 id="123">1.2.3 双端队列<a class="headerlink" href="#123" title="Permanent link">&para;</a></h4>
+<p>前面的队列只能在一端插入元素，在另一端删除元素，是<strong>单端队列</strong>。</p>
+<p><strong>双端队列</strong>允许在两端插入和删除元素。这也代表它同时具有<strong>栈</strong>和<strong>队列</strong>的性质。</p>
+<p>常用 STL 的双端队列 <code>deque</code>，它的操作和 <code>queue</code> 类似：</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">deque</span><span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;</span><span class="w"> </span><span class="n">dq</span><span class="p">;</span><span class="w"> </span><span class="c1">// 定义元素类型为 Type 的双端队列 dq</span>
+<span class="n">dq</span><span class="p">[</span><span class="n">i</span><span class="p">];</span><span class="w"> </span><span class="c1">// 访问双端队列中第 i 个元素</span>
+<span class="n">dq</span><span class="p">.</span><span class="n">front</span><span class="p">();</span><span class="w"> </span><span class="c1">// 返回双端队列的第一个元素，但不删除</span>
+<span class="n">dq</span><span class="p">.</span><span class="n">back</span><span class="p">();</span><span class="w"> </span><span class="c1">// 返回双端队列的最后一个元素，但不删除</span>
+<span class="n">dq</span><span class="p">.</span><span class="n">push_front</span><span class="p">(</span><span class="n">item</span><span class="p">);</span><span class="w"> </span><span class="c1">// 向双端队列的前面插入元素 item</span>
+<span class="n">dq</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">item</span><span class="p">);</span><span class="w"> </span><span class="c1">// 向双端队列的后面插入元素 item</span>
+<span class="n">dq</span><span class="p">.</span><span class="n">pop_front</span><span class="p">();</span><span class="w"> </span><span class="c1">// 删除双端队列的第一个元素</span>
+<span class="n">dq</span><span class="p">.</span><span class="n">pop_back</span><span class="p">();</span><span class="w"> </span><span class="c1">// 删除双端队列的最后一个元素</span>
+</code></pre></div></td></tr></table></div>
+<h5 id="_1">经典应用：单调队列<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h5>
+<p>单调队列是一种特殊的双端队列，其中的元素单调有序，且元素在队列中的顺序和原来在序列中的顺序相同。</p>
+<p>经典题目：<strong>滑动窗口最小值</strong>，即给定一个长度为 n 的数组和一个大小为 k 的滑动窗口，求每个滑动窗口中的最小值。（见<a href="https://www.luogu.com.cn/problem/P1886">洛谷P1886</a>）</p>
 
 
 
